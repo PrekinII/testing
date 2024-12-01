@@ -32,8 +32,8 @@ module.exports = {
         use: [
           {
             loader: 'html-loader',
-            options: {  
-              sources: {  
+            options: {
+              sources: {
                 list: [
                   {
                     tag: 'img',
@@ -52,18 +52,18 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: './'
-            }
-          }, 
+              publicPath: './',
+            },
+          },
           'css-loader',
         ],
       },
       {
         test: /\.(png|jpg|gif)$/i,
-        type: 'asset', 
+        type: 'asset',
         parser: {
           dataUrlCondition: {
-            maxSize: 8192
+            maxSize: 8192,
           },
         },
       },
@@ -71,8 +71,8 @@ module.exports = {
         test: /\.txt$/,
         type: 'asset/resource',
         generator: {
-          filename: '[name][ext]'
-        }
+          filename: '[name][ext]',
+        },
       },
     ],
   },
